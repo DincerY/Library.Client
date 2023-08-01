@@ -1,33 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { ListComponent } from '../components/books/list/list.component';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit{
-  faArrowUp = faArrowUp
+export class LayoutComponent  {
 
+  
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
-  goToUp(){
-    let myButton =document.getElementById("btn-back-to-top");
-
-    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-      myButton.style.display = "block";
-    }else{
-      myButton.style.display = "none";
-    }
-    myButton.addEventListener("click",backToTop);
-
-    function backToTop(){
-      document.body.scrollTop = 0 ;
-      document.documentElement.scrollTop = 0;
-    }
-
-  }
 }

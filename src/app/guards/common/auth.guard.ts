@@ -33,7 +33,6 @@ export class AuthGuard implements CanActivate {
       this.authService.idendityCheck();
       if(!callBackFunctionState){
         this.router.navigate(["login"],{ queryParams:{returnUrl: state.url}})
-      debugger
 
         this.toastrService.message("Yetkiniz bulunmamakta","Hata",{
           position:Position.TopRight,
