@@ -1,0 +1,8 @@
+<div class="card" *ngFor="let book of books ">
+    <div class="card-body">
+      <h1 class="card-title">{{book.title}} || Sayfa Sayısı: {{book.pageNumber}}</h1>
+      <h6 class="card-subtitle mb-2 text-primary" style="font-size: medium;">Yazar : {{book}}</h6>
+      <p class="card-text">{{book.description}}</p>
+      <button  class="btn btn-success">Okuma Listesine Ekle</button>
+    </div>
+  </div>

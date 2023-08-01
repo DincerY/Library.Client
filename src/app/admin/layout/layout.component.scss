@@ -1,0 +1,18 @@
+.admin-container {
+    width: 99%;
+    height: 860px;
+    margin: 10px;
+    border: 1px solid #555;
+  }
+  
+  .admin-left {
+    width: 200px;
+  }
+
+  #btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: black;
+    display: none;
+  }

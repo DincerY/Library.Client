@@ -1,0 +1,146 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <form [formGroup]="frm" (ngSubmit)="deneme(frm.value)">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email adresi</label>
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          id="email"
+          placeholder="name@example.com"
+          [ngClass]="{
+            'is-invalid':
+              (submitted && formControls.email.errors?.required) ||
+              formControls.email.errors?.email
+          }"
+        />
+        <small
+          style="color: red"
+          *ngIf="submitted && formControls.email.errors?.required"
+          >Lütfen Email'i boş geçmeyiniz.</small
+        >
+        <small
+          style="color: red"
+          *ngIf="submitted && formControls.email.errors?.email"
+          >Lütfen Email formatında bir giriş yapınız.</small
+        >
+      </div>
+      <div class="mb-3">
+        <label for="userName" class="form-label">Kullanıcı Adı</label>
+        <input
+          type="text"
+          formControlName="userName"
+          class="form-control"
+          id="userName"
+          placeholder=""
+          [ngClass]="{
+            'is-invalid': submitted && formControls.userName.errors?.required
+          }"
+        />
+        <small
+          style="color: red"
+          *ngIf="submitted && formControls.userName.errors?.required"
+          >Lütfen Kullanıcı Adı'nı boş geçmeyiniz.</small
+        >
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Şifre</label>
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          id="password"
+          placeholder=""
+          [ngClass]="{
+            'is-invalid': submitted && formControls.password.errors?.required
+          }"
+        />
+        <small
+          style="color: red"
+          *ngIf="submitted && formControls.password.errors?.required"
+          >Lütfen Şifre giriniz.</small
+        >
+      </div>
+      <div class="mb-3">
+        <label for="passwordConfirm" class="form-label">Şifre Tekrar</label>
+        <input
+          type="password"
+          formControlName="passwordConfirm"
+          class="form-control"
+          id="passwordConfirm"
+          placeholder=""
+          [ngClass]="{
+            'is-invalid':
+              submitted && formControls.passwordConfirm.errors?.required
+          }"
+        />
+        <small
+          style="color: red"
+          *ngIf="submitted && formControls.passwordConfirm.errors?.required"
+          >Lütfen şifre yi onaylayınız</small
+        ><br />
+        <small style="color: red" *ngIf="submitted && frm.errors"
+          >Şifreler aynı değil</small
+        >
+      </div>
+      <div class="mb-3">
+        <label for="firstName" class="form-label">Ad</label>
+        <input
+          type="text"
+          formControlName="firstName"
+          class="form-control"
+          id="firstName"
+          placeholder=""
+          [ngClass]="{
+            'is-invalid': submitted && formControls.firstName.errors?.required
+          }"
+        />
+        <small
+          style="color: red"
+          *ngIf="submitted && formControls.firstName.errors?.required"
+          >Lütfen isimi boş geçmeyiniz.</small
+        >
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Soy Ad</label>
+        <input
+          type="text"
+          formControlName="lastName"
+          class="form-control"
+          id="lastName"
+          placeholder=""
+          [ngClass]="{
+            'is-invalid': submitted && formControls.lastName.errors?.required
+          }"
+        />
+        <small
+          style="color: red"
+          *ngIf="submitted && formControls.lastName.errors?.required"
+          >Lütfen soy adı boş geçmeyiniz.</small
+        >
+      </div>
+      <div class="mb-3">
+        <label for="age" class="form-label">Yaş</label>
+        <input
+          type="text"
+          formControlName="age"
+          class="form-control"
+          id="age"
+          placeholder=""
+          [ngClass]="{
+            'is-invalid': submitted && formControls.age.errors?.required
+          }"
+        />
+        <small
+          style="color: red"
+          *ngIf="submitted && formControls.age.errors?.required"
+          >Lütfen yaşı boş geçmeyiniz.</small
+        >
+      </div>
+      <button type="submit" class="btn btn-success">Kayıt Ol</button>
+    </form>
+  </div>
+  <div class="col-md-3"></div>
+</div>

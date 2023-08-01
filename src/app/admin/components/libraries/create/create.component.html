@@ -1,0 +1,47 @@
+<form #frm="ngForm" (ngSubmit)="createLibrary(frm.value)">
+  <div class="mb-3">
+    <label for="libraryName" class="form-label">Library Name</label><br />
+    <input
+      type="text"
+      class="form-control-lg"
+      id="libraryName"
+      placeholder="Sarar Kütüphanesi"
+      name="libraryName"
+      ngModel
+    />
+  </div>
+  <div class="mb-3">
+    <label for="address" class="form-label">Library Name</label><br />
+    <input
+      type="text"
+      class="form-control-lg"
+      id="address"
+      placeholder="Sarar Kütüphanesi"
+      name="address"
+      ngModel
+    />
+  </div>
+  <div class="mb-3">
+    <label for="books" class="form-label">Books</label>
+    <select
+      size="20"
+      class="form-select"
+      multiple
+      id="books"
+      name="formSelectBooks"
+      ngModel
+    >
+      <option *ngFor="let book of allBooks" [value]="book.id">
+        {{ book.title }}
+      </option>
+    </select>
+  </div>
+
+  <button
+    style="margin-left: 200px"
+    class="btn btn-success"
+    (click)="deneme(frm)"
+  >
+    Kütüphane Ekle
+  </button>
+</form>

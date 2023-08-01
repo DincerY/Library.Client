@@ -1,0 +1,62 @@
+<form #frm="ngForm" (ngSubmit)="createBook(frm.value)">
+  <div class="mb-3">
+    <label for="pageNumber" class="form-label">Page Number</label>
+    <input
+      type="text"
+      class="form-control-lg"
+      id="pageNumber"
+      placeholder="123"
+      name="pageNumber"
+      ngModel
+    />
+  </div>
+  <div class="mb-3">
+    <label for="title" class="form-label">Title---------</label>
+    <input
+      type="text"
+      class="form-control-lg"
+      id="title"
+      placeholder="Kırmızı Başlıklı Kız"
+      name="title"
+      ngModel
+    />
+  </div>
+  
+  <div class="mb-3">
+    <label for="description" class="form-label"
+      >Description</label
+    >
+    <textarea
+      class="form-control"
+      id="description"
+      rows="3"
+      name="description"
+      ngModel
+    ></textarea>
+  </div>
+  
+  <div class="mb-3">
+    <label for="authors" class="form-label">Authors</label>
+    <select class="form-select" multiple id="authors" name="formSelectAuthors" ngModel>
+      <option *ngFor="let author of allAuthors" [value]="author.id">{{author.name}} {{author.surname}}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="libraries" class="form-label">Libraries</label>
+    <select class="form-select" multiple id="libraries" name="formSelectLibraries" ngModel>
+      <option *ngFor="let library of allLibraries" [value]="library.id">{{library.name}} ||{{library.address}}</option>
+  
+    </select>
+  </div>
+  <button
+    style="margin-left: 200px"
+    class="btn btn-success"
+    (click)="deneme(frm)"
+  >
+    Kitap Oluştur
+  </button>
+</form>
+
+
+
+

@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <form #loginFrm = "ngForm" (ngSubmit)="login(loginFrm.value)">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Kullanıcı Adı Veya Email"
+          name = "emailOrUsername"
+          ngModel
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="********"
+          name="password"
+          ngModel
+        />
+      </div>
+      <button type="submit" class="btn btn-success">Giriş Yap</button>
+  
+    </form>
+  </div>
+  <div class="col-md-3"></div>
+</div>
