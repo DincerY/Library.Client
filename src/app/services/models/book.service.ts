@@ -26,7 +26,7 @@ export class BookService {
     const observable: Observable<Create_Book> = this.httpClientService.post<Create_Book>({
       controller:"books"
     },createBook)
-
+    debugger
     const promiseData = firstValueFrom(observable);
     promiseData.then(
       value => successCallBack()

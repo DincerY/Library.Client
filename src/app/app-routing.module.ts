@@ -21,8 +21,15 @@ const routes: Routes = [
         loadChildren:()=> import("./admin/components/libraries/libraries.module").then(
           module => module.LibrariesModule
         ),canActivate: [AuthGuard]
+      },
+      {
+        path:"readlists",
+        loadChildren:()=> import("./admin/components/read-list/read-list.module").then(
+          module => module.ReadListModule
+        ),canActivate: [AuthGuard]
       }
     ], canActivate: [AuthGuard]
+    
   },
   {
     path: '',
