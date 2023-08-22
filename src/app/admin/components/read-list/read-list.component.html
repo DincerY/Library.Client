@@ -1,13 +1,13 @@
-<!-- <div class="card" *ngFor="let readlist of readList ">
+<div class="card" *ngFor="let readListItem of readListItems ">
     <div class="card-body">
-      <h1 class="card-title">{{readlist.readListItem.Book.title}} || Sayfa Sayısı: {{readlist.readListItem.Book.pageNumber}}</h1>
+      <h1 class="card-title">{{readListItem.readListItemId}} || Sayfa Sayısı: {{readListItem.Book.id}}</h1>
       <div class="card text-left mb-3" style="width: 18rem;">
         <div class="card-body">
           <h4 class="card-title">Kitap Detayları</h4>
-          <h6 class="card-subtitle mb-2 text-primary" *ngFor="let author of readlist.readListItem.Book.authors" style="font-size: medium;">Yazar : {{author.name}} {{author.surname}} </h6>
-          <h6 class="card-subtitle mb-2 text-primary" *ngFor="let library of readlist.readListItem.Book.librarys" style="font-size: medium;">Kütüphane Adı :  {{library.name}} Adresi: {{library.address}}</h6>
+         <!-- <h6 class="card-subtitle mb-2 text-primary" *ngFor="let author of readListItem.Book.authors" style="font-size: medium;">Yazar : {{author.authorName}} {{author.authorSurname}} </h6>
+          <h6 class="card-subtitle mb-2 text-primary" *ngFor="let library of readListItem.Book.libraries" style="font-size: medium;">Kütüphane Adı :  {{library.libraryName}} Adresi: {{library.libraryAddress}}</h6> -->
     
         </div>
       </div>
-      <p class="card-text">{{readlist.readListItem.Book.description}}</p>
-    </div>  -->
+      <p class="card-text">{{readListItem.Book.description}}</p>
+    </div> 
